@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head itemscope itemtype="http://schema.org/WebSite">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+    <script src="https://cdn.rawgit.com/mrk-j/paginga/v0.8.1/paginga.jquery.min.js"></script>
+
+    <title> Kvitka </title>
+
+    <link rel="stylesheet" href="./css/app.css">
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+
+    <header>
+        <div id="userInfo">
+            <div id="accountImgDiv"><img src="images/tools/account.png" alt="user" id="accountImg"></div>
+            <div id="vitayemoDiv">
+                <h4> Вітаємо </h4>
+            </div>
+        </div>
+
+        <div id="menu">
+            <div id="kvitkaDiv">
+                <h1> Kvitka </h1>
+            </div>
+
+            <div id="menuDiv">
+                <nav>
+                    <ul id="menu">
+                        <li><a href="index.html">
+                                <h4>Головна</h4>
+                            </a></li>
+                        <li><a href="flowersCatalogUnknown.html" id="createSubmenu">
+                                <h4>Каталог</h4>
+                            </a>
+                            <ul id="submenu">
+                                <li><a href="flowersCatalogUnknown.html">
+                                        <h4>Квіти</h4>
+                                    </a></li>
+                                <li><a href="bouquetsCatalogUnknown.html">
+                                        <h4>Букети</h4>
+                                    </a></li>
+                            </ul>
+                        </li>
+                        <li id="activeMenu"><a href="galleryUnknown.html">
+                                <h4>Галерея</h4>
+                            </a></li>
+                        <li><a href="contactsUnknown.html">
+                                <h4>Контакти</h4>
+                            </a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="paginate">
+			<div class="items">
+				<div><img src="images/gallery/img1.jpg" alt="flowers" id="galleryImg"></div>
+				<div><img src="images/gallery/img2.jpg" alt="flowers" id="galleryImg"></div>
+				<div><img src="images/gallery/img3.jpg" alt="flowers" id="galleryImg"></div>
+				<div><img src="images/gallery/img4.jpg" alt="flowers" id="galleryImg"></div>
+				<div><img src="images/gallery/img5.jpg" alt="flowers" id="galleryImg"></div>
+				<div><img src="images/gallery/img6.jpg" alt="flowers" id="galleryImg"></div>
+				<div><img src="images/gallery/img7.jpg" alt="flowers" id="galleryImg"></div>
+				<div><img src="images/gallery/img8.jpg" alt="flowers" id="galleryImg"></div>
+				<div><img src="images/gallery/img9.jpg" alt="flowers" id="galleryImg"></div>
+				<div><img src="images/gallery/img10.jpg" alt="flowers" id="galleryImg"></div>
+				<div><img src="images/gallery/img11.jpeg" alt="flowers" id="galleryImg"></div>
+				<div><img src="images/gallery/img12.jpg" alt="flowers" id="galleryImg"></div>
+                <div><img src="images/gallery/img13.jpg" alt="flowers" id="galleryImg"></div>
+				<div><img src="images/gallery/img14.jpg" alt="flowers" id="galleryImg"></div>
+				<div><img src="images/gallery/img15.png" alt="flowers" id="galleryImg"></div>
+			</div>
+			<div class="pager">
+				<div class="firstPage">&laquo;</div>
+				<div class="previousPage">&lsaquo;</div>
+				<div class="pageNumbers"></div>
+				<div class="nextPage">&rsaquo;</div>
+				<div class="lastPage">&raquo;</div>
+			</div>
+		</div>
+    </main>
+
+    <footer>
+        <div id="kvitkaDiv">
+            <h1> Kvitka </h1>
+        </div>
+
+        <div id="socialDiv">
+            <img src="images/tools/facebook.png" alt="user" id="facebookImg"
+                onclick="window.location='https://www.facebook.com/'">
+            <img src="images/tools/inst.png" alt="user" id="instImg"
+                onclick="window.location='https://www.instagram.com/'">
+            <img src="images/tools/telegram.png" alt="user" id="telegramImg"
+                onclick="window.location='https://web.telegram.org/z/'">
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        $(".paginate").paginga({ itemsPerPage: 3 });
+     </script>
+
+</body>
+
+</html>

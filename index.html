@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head itemscope itemtype="http://schema.org/WebSite">
+
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title> Kvitka </title>
+
+   <!--Lodash-->
+   <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+   <link rel="stylesheet" href="./css/app.css">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+
+   <header>
+      <div id="userInfo">
+         <div id="accountImgDiv"><img src="images/tools/account.png" alt="user" id="accountImg"></div>
+         <div id="vitayemoDiv">
+            <h4> Вітаємо </h4>
+         </div>
+      </div>
+ 
+      <div id="menu">
+         <div id="kvitkaDiv">
+            <h1> Kvitka </h1>
+         </div>
+
+         <div id="menuDiv">
+            <nav>
+               <ul id="menu">
+                  <li id="activeMenu"><a href="">
+                        <h4>Головна</h4>
+                     </a></li>
+                  <li><a href="flowersCatalogUnknown.html" id="createSubmenu">
+                        <h4>Каталог</h4>
+                     </a>
+                     <ul id="submenu">
+                        <li><a href="flowersCatalogUnknown.html">
+                              <h4>Квіти</h4>
+                           </a></li>
+                        <li><a href="bouquetsCatalogUnknown.html">
+                              <h4>Букети</h4>
+                           </a></li>
+                     </ul>
+                  </li>
+                  <li><a href="galleryUnknown.html">
+                        <h4>Галерея</h4>
+                     </a></li>
+                  <li><a href="contactsUnknown.html">
+                        <h4>Контакти</h4>
+                     </a></li>
+               </ul>
+            </nav>
+         </div>
+      </div>
+   </header>
+
+   <main>
+      <img id="wallpaper" src="images/wallpapers/wallpaper1.jpg" alt="flowers">
+      <div id="main">
+      <div id="leftArrowDiv"><img src="images/tools/left.png" alt="left" id="leftImg" onclick="previousImg()"></div>
+      <div id="whiteDiv">
+         <h2 id="podarunkiBlyzkim"> Подарунки близьким </h2>
+         <button id="loginButtonRegistr" onclick="window.location='signUp.html'">
+            <h4> Зареєструватися </h4>
+         </button>
+         <button id="loginButtonEnter" onclick="window.location='signIn.html'">
+            <h4> Увійти </h4>
+         </button>
+      </div>
+      <div id="rightArrowDiv"><img src="images/tools/right.png" alt="right" id="rightImg" onclick="nextImg()"></div>
+   </div>
+   </main>
+
+   <footer>
+      <div id="kvitkaDiv">
+         <h1> Kvitka </h1>
+      </div>
+
+      <div id="socialDiv">
+         <img src="images/tools/facebook.png" alt="user" id="facebookImg" onclick="window.location='https://www.facebook.com/'">
+         <img src="images/tools/inst.png" alt="user" id="instImg" onclick="window.location='https://www.instagram.com/'">
+         <img src="images/tools/telegram.png" alt="user" id="telegramImg" onclick="window.location='https://web.telegram.org/z/'">
+      </div>
+   </footer>
+
+   <script type="text/javascript" src="./js/app.js"></script>
+</body>
+
+</html>

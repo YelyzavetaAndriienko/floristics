@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head itemscope itemtype="http://schema.org/WebSite">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+    <script src="https://cdn.rawgit.com/mrk-j/paginga/v0.8.1/paginga.jquery.min.js"></script>
+
+    <title> Kvitka </title>
+
+    <link rel="stylesheet" href="./css/app.css">
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+
+    <header>
+        <div id="userInfoMain">
+            <div id="accountImgDivMain"><img src="images/tools/account.png" alt="user" id="accountImg"></div>
+            <div id="phoneDivMain"></div>
+            <div id="vitayemoDivMain">
+               <h4 id="userName"></h4>
+            </div>
+            <div id="heartImgDivMain"><img src="images/tools/heart.png" alt="heart" id="heartImg" onclick="createChoosenPopup()"></div>
+         </div>
+
+        <div id="menu">
+            <div id="kvitkaDiv">
+                <h1> Kvitka </h1>
+            </div>
+
+            <div id="menuDiv">
+                <nav>
+                    <ul id="menu">
+                        <li><a href="main.html">
+                                <h4>Головна</h4>
+                            </a></li>
+                        <li><a href="flowersCatalog.html" id="createSubmenu">
+                                <h4>Каталог</h4>
+                            </a>
+                            <ul id="submenu">
+                                <li><a href="flowersCatalog.html">
+                                        <h4>Квіти</h4>
+                                    </a></li>
+                                <li><a href="bouquetsCatalog.html">
+                                        <h4>Букети</h4>
+                                    </a></li>
+                            </ul>
+                        </li>
+                        <li id="activeMenu"><a href="gallery.html">
+                                <h4>Галерея</h4>
+                            </a></li>
+                        <li><a href="contacts.html">
+                                <h4>Контакти</h4>
+                            </a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="paginate">
+			<div class="items">
+				<div><img src="images/gallery/img1.jpg" alt="flowers" id="galleryImg"></div>
+				<div><img src="images/gallery/img2.jpg" alt="flowers" id="galleryImg"></div>
+				<div><img src="images/gallery/img3.jpg" alt="flowers" id="galleryImg"></div>
+				<div><img src="images/gallery/img4.jpg" alt="flowers" id="galleryImg"></div>
+				<div><img src="images/gallery/img5.jpg" alt="flowers" id="galleryImg"></div>
+				<div><img src="images/gallery/img6.jpg" alt="flowers" id="galleryImg"></div>
+				<div><img src="images/gallery/img7.jpg" alt="flowers" id="galleryImg"></div>
+				<div><img src="images/gallery/img8.jpg" alt="flowers" id="galleryImg"></div>
+				<div><img src="images/gallery/img9.jpg" alt="flowers" id="galleryImg"></div>
+				<div><img src="images/gallery/img10.jpg" alt="flowers" id="galleryImg"></div>
+				<div><img src="images/gallery/img11.jpeg" alt="flowers" id="galleryImg"></div>
+				<div><img src="images/gallery/img12.jpg" alt="flowers" id="galleryImg"></div>
+                <div><img src="images/gallery/img13.jpg" alt="flowers" id="galleryImg"></div>
+				<div><img src="images/gallery/img14.jpg" alt="flowers" id="galleryImg"></div>
+				<div><img src="images/gallery/img15.png" alt="flowers" id="galleryImg"></div>
+			</div>
+			<div class="pager">
+				<div class="firstPage">&laquo;</div>
+				<div class="previousPage">&lsaquo;</div>
+				<div class="pageNumbers"></div>
+				<div class="nextPage">&rsaquo;</div>
+				<div class="lastPage">&raquo;</div>
+			</div>
+		</div>
+
+        <div id="choosenPopup">
+            <div id="choosenContent">
+                <div id="close" onclick="closeChoosenPopup(document.getElementById('choosenPopup'), document.getElementById('choosenDiv2Content'))">&#215;</div>
+                <div id="choosenDiv1">
+                  <h3>Обране</h3>
+               </div>
+               <div id="choosenDiv2"><div id="choosenDiv2Content"></div></div>
+               <div id="choosenDiv3">
+                  <div id="radioDiv0">
+                     <input type="radio" id="radio0" name="choosenRadio" value="radio0" checked onclick="countFinalPrice()">
+                     <div id="labelRadioDiv0">
+                        <label for="radio0">Без оформлення </label>
+                        <label for="radio0">0 грн</label>
+                     </div>
+                  </div>
+                  <div id="radioDiv1">
+                     <input type="radio" id="radio1" name="choosenRadio" value="radio1" onclick="countFinalPrice()">
+                     <div id="labelRadioDiv1">
+                        <label for="radio1">Оформлення стрічкою </label>
+                        <label for="radio1">10 грн</label>
+                     </div>
+                  </div>
+                  <div id="radioDiv2">
+                     <input type="radio" id="radio2" name="choosenRadio" value="radio2" onclick="countFinalPrice()">
+                     <div id="labelRadioDiv2">
+                        <label for="radio2">Оформлення прозорою обгорткою </label>
+                        <label for="radio2">20 грн</label>
+                     </div>
+                  </div>
+                  <div id="radioDiv3">
+                     <input type="radio" id="radio3" name="choosenRadio" value="radio3" onclick="countFinalPrice()">
+                     <div id="labelRadioDiv3">
+                        <label for="radio3">Подарункове оформлення </label>
+                        <label for="radio3">50 грн</label>
+                     </div>
+                  </div>
+               </div>
+                  <div id="choosenDiv4">
+                    <div id="finalPriceDiv">
+                        <h4>Всього до сплати:</h4>
+                        <h4 id="finalPrice">0 грн</h4>
+                     </div>
+                     <div id="buttonDiv">
+                        <button id="choosenPopupButton" onclick="closeChoosenPopup(document.getElementById('choosenPopup'), document.getElementById('choosenDiv2Content'))">Замовити</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+    </main>
+
+    <footer>
+        <div id="kvitkaDiv">
+            <h1> Kvitka </h1>
+        </div>
+
+        <div id="socialDiv">
+            <img src="images/tools/facebook.png" alt="user" id="facebookImg" onclick="window.location='https://www.facebook.com/'">
+            <img src="images/tools/inst.png" alt="user" id="instImg" onclick="window.location='https://www.instagram.com/'">
+            <img src="images/tools/telegram.png" alt="user" id="telegramImg" onclick="window.location='https://web.telegram.org/z/'">
+         </div>
+    </footer>
+
+    <script type="text/javascript" src="./js/app.js"></script>
+
+    <script type="text/javascript">
+        $(".paginate").paginga({ itemsPerPage: 3 });
+       getUsersInfo();
+    </script>
+</body>
+
+</html>

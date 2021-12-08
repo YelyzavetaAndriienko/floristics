@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head itemscope itemtype="http://schema.org/WebSite">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Kvitka </title>
+
+    <!--Lodash-->
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <link rel="stylesheet" href="./css/app.css">
+
+    <style>
+        header,
+        body,
+        footer {
+            overflow: hidden;
+        }
+
+        main {
+            position: absolute;
+            top: 82px;
+            left: 0;
+            height: calc(100% - 153px);
+            width: 100%;
+            overflow-y: auto;
+            margin: 0;
+            padding: 0;
+            padding-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        h5 {
+            margin: 0;
+            margin: 5px;
+            text-align: center;
+        }
+/*
+        @media screen and (min-width: 480px) and (max-width: 768px) {
+            main {
+                height: 85%;
+            }
+        }
+
+        @media screen and (max-width: 580px) {
+            main {
+                height: 85%;
+            }
+        }
+
+        @media screen and (max-width: 510px) {
+            main {
+                height: 72%;
+            }
+        }
+
+        @media screen and (max-width: 38px) {
+            main {
+                height: 90%;
+            }
+        }*/
+    </style>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+
+    <header>
+        <div id="userInfo">
+            <div id="accountImgDiv"><img src="images/tools/account.png" alt="user" id="accountImg"></div>
+            <div id="vitayemoDiv">
+                <h4> Вітаємо </h4>
+            </div>
+        </div>
+
+        <div id="menu">
+            <div id="kvitkaDiv">
+                <h1> Kvitka </h1>
+            </div>
+
+            <div id="menuDiv">
+                <nav>
+                    <ul id="menu">
+                        <li><a href="index.html">
+                                <h4>Головна</h4>
+                            </a></li>
+                        <li id="activeMenu"><a href="flowersCatalogUnknown.html" id="createSubmenu">
+                                <h4>Каталог</h4>
+                            </a>
+                            <ul id="submenu">
+                                <li><a href="flowersCatalogUnknown.html">
+                                        <h4>Квіти</h4>
+                                    </a></li>
+                                <li><a href="bouquetsCatalogUnknown.html">
+                                        <h4>Букети</h4>
+                                    </a></li>
+                            </ul>
+                        </li>
+                        <li><a href="galleryUnknown.html">
+                                <h4>Галерея</h4>
+                            </a></li>
+                        <li><a href="contactsUnknown.html">
+                                <h4>Контакти</h4>
+                            </a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div id="filtersDivB">
+            <div id="filtersDivLeftB">
+                <select id="sortButtonB" name="sortButton[]" onchange="specifyBouquets()">
+                    <option value="rating">За рейтингом</option>
+                    <option value="increasePrice">За зростанням ціни</option>
+                    <option value="decreasePrice">За спаданням ціни</option>
+                    <option value="new">Спочатку нові</option>
+                </select>
+                <nav id="navvB">
+                    <ul id="filtersUlB">
+                        <li id="flowerFilterButtonB" class="filtersLiB">
+                            <h4>Квітка</h4>
+                            <ul id="flowerFilterSubmenuB">
+                                <li class="filtersLiB"><input type="checkbox" class="filtersCheckboxB" id="alstromeria"
+                                        value="альстромерія" onclick="specifyBouquets()">альстромерія</li>
+                                <li class="filtersLiB"><input type="checkbox" class="filtersCheckboxB" id="gerbera"
+                                        value="гербера" onclick="specifyBouquets()">гербера</li>
+                                <li class="filtersLiB"><input type="checkbox" class="filtersCheckboxB" id="hyacinth"
+                                        value="гіацинт" onclick="specifyBouquets()">гіацинт</li>
+                                <li class="filtersLiB"><input type="checkbox" class="filtersCheckboxB" id="lily"
+                                        value="лілія" onclick="specifyBouquets()">лілія</li>
+                                <li class="filtersLiB"><input type="checkbox" class="filtersCheckboxB" id="peony"
+                                        value="півонія" onclick="specifyBouquets()">півонія</li>
+                                <li class="filtersLiB"><input type="checkbox" class="filtersCheckboxB" id="daisy"
+                                        value="ромашка" onclick="specifyBouquets()">ромашка</li>
+                                <li class="filtersLiB"><input type="checkbox" class="filtersCheckboxB" id="sunflower"
+                                        value="соняшник" onclick="specifyBouquets()">соняшник</li>
+                                <li class="filtersLiB"><input type="checkbox" class="filtersCheckboxB" id="rose"
+                                        value="троянда" onclick="specifyBouquets()">троянда</li>
+                                <li class="filtersLiB"><input type="checkbox" class="filtersCheckboxB" id="tulip"
+                                        value="тюльпан" onclick="specifyBouquets()">тюльпан</li>
+                                <li class="filtersLiB"><input type="checkbox" class="filtersCheckboxB" id="freesia"
+                                        value="фрезія" onclick="specifyBouquets()">фрезія</li>
+                                <li class="filtersLiB"><input type="checkbox" class="filtersCheckboxB" id="chrysanthemum"
+                                        value="хризантема" onclick="specifyBouquets()">хризантема</li>
+                            </ul>
+                        </li>
+                        <li id="colorFilterButtonB" class="filtersLiB">
+                            <h4>Колір</h4>
+                            <ul id="colorFilterSubmenuB">
+                                <li class="filtersLiB"><input type="checkbox" class="filtersCheckboxB" id="redB"
+                                        value="червоний" onclick="specifyBouquets()">червоний</li>
+                                <li class="filtersLiB"><input type="checkbox" class="filtersCheckboxB" id="pinkB"
+                                        value="рожевий" onclick="specifyBouquets()">рожевий</li>
+                                <li class="filtersLiB"><input type="checkbox" class="filtersCheckboxB" id="purpleB"
+                                        value="фіолетовий" onclick="specifyBouquets()">фіолетовий</li>
+                                <li class="filtersLiB"><input type="checkbox" class="filtersCheckboxB" id="yellowB"
+                                        value="жовтий" onclick="specifyBouquets()">жовтий</li>
+                                <li class="filtersLiB"><input type="checkbox" class="filtersCheckboxB" id="orangeB"
+                                        value="помаранчевий" onclick="specifyBouquets()">помаранчевий</li>
+                                <li class="filtersLiB"><input type="checkbox" class="filtersCheckboxB" id="whiteB"
+                                        value="білий" onclick="specifyBouquets()">білий</li>
+                            </ul>
+                        </li>
+                        <li id="priceFilterButtonB" class="filtersLiB">
+                            <h4>Ціна</h4>
+                            <ul id="priceFilterSubmenuB">
+                                <li class="filtersLiB">
+                                    from <input type="number" class="filtersCheckboxB" id="priceFromB" min="0" max="100"
+                                        oninput="specifyBouquets()">
+                                    to <input type="number" class="filtersCheckboxB" id="priceToB" min="0" max="100"
+                                        oninput="specifyBouquets()">
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div id="filtersDivRight">
+                <input type="text" id="searchB" maxlength="100" placeholder="Знайти букет">
+                <button id="searchButtonB" onclick="specifyBouquets()">
+                    <img src="images/tools/lupa.png" alt="find" id="lupaImg">
+                </button>
+            </div>
+        </div>
+
+        <div id="cardDivB" class="itemsB"></div>
+    </main>
+
+    <footer>
+        <div id="kvitkaDiv">
+            <h1> Kvitka </h1>
+        </div>
+
+        <div id="socialDiv">
+            <img src="images/tools/facebook.png" alt="user" id="facebookImg"
+                onclick="window.location='https://www.facebook.com/'">
+            <img src="images/tools/inst.png" alt="user" id="instImg"
+                onclick="window.location='https://www.instagram.com/'">
+            <img src="images/tools/telegram.png" alt="user" id="telegramImg"
+                onclick="window.location='https://web.telegram.org/z/'">
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="./js/app.js"></script>
+    <script type="text/javascript" src="./js/bouquetsCatalog.js"></script>
+    <script type="text/javascript">
+        createBouquets();
+        createCardsB(bouquetsArray);
+     </script>
+</body>
+
+</html>

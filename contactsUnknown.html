@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head itemscope itemtype="http://schema.org/WebSite">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Kvitka </title>
+
+    <!--Leaflet-->
+    <link rel="stylesheet" href="http://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="http://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <link rel="stylesheet" href="./css/app.css">
+
+    <style>
+        h2, h4, h5 {
+            margin: 30px;
+        }
+
+        h5 {
+            text-align: justify;
+        }
+
+        @media screen and (min-width: 480px) and (max-width: 768px) {
+            main {
+                overflow-y: hidden;
+                overflow-x: hidden;
+            }
+
+            h2 {
+                margin: 0;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            main {
+                overflow-y: hidden;
+                overflow-x: hidden;
+            }
+
+            h2 {
+                margin: 0;
+                margin-top: 10px;
+                margin-bottom: -10px;
+            }
+        }
+    </style>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+
+    <header>
+        <div id="userInfo">
+            <div id="accountImgDiv"><img src="images/tools/account.png" alt="user" id="accountImg"></div>
+            <div id="vitayemoDiv">
+                <h4> Вітаємо </h4>
+            </div>
+        </div>
+
+        <div id="menu">
+            <div id="kvitkaDiv">
+                <h1> Kvitka </h1>
+            </div>
+
+            <div id="menuDiv">
+                <nav>
+                    <ul id="menu">
+                        <li><a href="index.html">
+                                <h4>Головна</h4>
+                            </a></li>
+                        <li><a href="flowersCatalogUnknown.html" id="createSubmenu">
+                                <h4>Каталог</h4>
+                            </a>
+                            <ul id="submenu">
+                                <li><a href="flowersCatalogUnknown.html">
+                                        <h4>Квіти</h4>
+                                    </a></li>
+                                <li><a href="bouquetsCatalogUnknown.html">
+                                        <h4>Букети</h4>
+                                    </a></li>
+                            </ul>
+                        </li>
+                        <li><a href="galleryUnknown.html">
+                                <h4>Галерея</h4>
+                            </a></li>
+                        <li id="activeMenu"><a href="contactsUnknown.html">
+                                <h4>Контакти</h4>
+                            </a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div id="mainContacts">
+            <div id="leftContacts"></div>
+            <div id="rightContacts">
+                <div id="topRightContacts">
+                    <h2>
+                        Про нас
+                    </h2>
+                    <h5>
+                        Kvitka - це не просто магазин продажу квітів, а місце, де професійні флористи можуть виконати будь-яку примху 
+                        квіткового світу при попередньому замовленні. Ми завжди слідкуємо за новинками квітів на виставках 
+                        світу і раді запропонувати їх Вам. 
+                        <br>
+                        Ми працюємо з кращими фірмами Голландії, Колумбії, Еквадору та Кенії. 
+                        Для наших клієнтів підбираємо завжди найкращі та 100% свіжі квіти.
+                    </h5>
+                </div>
+
+                <div id="bottomRightContacts">
+                    <h4>
+                        Тел.: +38 (093) 116 52 63
+                        <br>
+                        Адреса: м. Київ, вул. Григорія Сковороди, 2
+                        <br>
+                        Пошта: yelyzaveta.andriienko@ukma.edu.ua
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div id="kvitkaDiv">
+            <h1> Kvitka </h1>
+        </div>
+
+        <div id="socialDiv">
+            <img src="images/tools/facebook.png" alt="user" id="facebookImg" onclick="window.location='https://www.facebook.com/'">
+            <img src="images/tools/inst.png" alt="user" id="instImg" onclick="window.location='https://www.instagram.com/'">
+            <img src="images/tools/telegram.png" alt="user" id="telegramImg" onclick="window.location='https://web.telegram.org/z/'">
+         </div>
+    </footer>
+
+    <script type="text/javascript" src="./js/app.js"></script>
+    <script type="text/javascript">
+       createMap();
+    </script>
+
+</body>
+
+</html>
